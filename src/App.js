@@ -2,8 +2,10 @@
 import React, {Component} from 'react';
 import {Provider} from 'react-redux'
 import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom'
-import Counter from './containers/counter/container'
+import BaseLayout from './components/BaseLayout'
+import routes from './routes'
 import './App.less';
+import {routePath} from './config';
 
 class App extends Component {
   render() {
@@ -12,8 +14,10 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <Switch>
-            <Route path="/counter" component={Counter}/>
-            <Redirect path="/" to="/counter"/>
+            <BaseLayout>
+              {routes.map(({path, component}) => (<Route exact key={path} path={path} component={component}/>))}
+            </BaseLayout>
+            <Redirect exact path={routePath.base} to={routePath.excel2json}/>
           </Switch>
         </Router>
       </Provider>

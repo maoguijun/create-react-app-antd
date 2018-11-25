@@ -10,9 +10,6 @@ class Counter extends Component {
     super(props);
     this.state = {}
   }
-  // add = value => {   console.log(this.props)   const {dispatch} = this.props
-  // dispatch({type: 'ADD', value}) } delete = value => {   const {dispatch} =
-  // this.props   dispatch({type: 'DELETE', value}) }
   render() {
     const {
       Counter: {
