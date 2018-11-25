@@ -1,15 +1,11 @@
 import 'babel-polyfill'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux'
-import {createStore} from 'redux'
-import PropTypes from 'prop-types'
-import rootReducer from './reducers'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-const store = createStore(rootReducer)
+import configureStore from './store';
+const store = configureStore()
 
 ReactDOM.render(
   <App store={store}/>, document.getElementById('root'));

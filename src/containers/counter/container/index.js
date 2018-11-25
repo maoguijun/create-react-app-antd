@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux';
 
 import {Button, Col, Row} from 'antd';
+import * as actions from '../actions';
 
 class Counter extends Component {
   constructor(props) {
@@ -13,25 +14,42 @@ class Counter extends Component {
   // dispatch({type: 'ADD', value}) } delete = value => {   const {dispatch} =
   // this.props   dispatch({type: 'DELETE', value}) }
   render() {
-    const {Counter: {
-        value
-      }, addNumber, deleteNumber} = this.props
+    const {
+      Counter: {
+        value,
+        stars
+      },
+      addNumber,
+      deleteNumber,
+      getStars
+    } = this.props
     console.log(this.props)
     return (
-      <Row style={{
+      <Row
+        style={{
         textAlign: 'center',
-        marginTop: '100px'
+        width: 1000,
+        margin: '100px auto 0'
       }}>
         <Button type="primary" onClick={() => addNumber(1)}>+ 1</Button>
         <Button type="primary" onClick={() => addNumber(2)}>+ 2</Button>
         <Button type="primary" onClick={() => deleteNumber(1)}>- 1</Button>
         <Button type="primary" onClick={() => deleteNumber(2)}>- 2</Button>
         <Row>
-          <Col>
+          <Col span={6}>
             value
           </Col>
-          <Col>
+          <Col span={18}>
             {value}
+          </Col>
+        </Row>
+        <Button type="primary" onClick={() => getStars()}>get stars</Button>
+        <Row>
+          <Col span={6}>
+            stars
+          </Col>
+          <Col span={18}>
+            {stars}
           </Col>
         </Row>
       </Row>
@@ -40,8 +58,7 @@ class Counter extends Component {
 }
 const mapDispatchToProps = (dispatch) => ({
   ...bindActionCreators({
-    addNumber: (value) => ({type: 'ADD', value}),
-    deleteNumber: (value) => ({type: 'DELETE', value})
+    ...actions
   }, dispatch)
 })
 const mapStateToProps = (state, ownProps) => {

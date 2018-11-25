@@ -1,9 +1,10 @@
-const add = (state = {
-  value: 0
-}, action) => {
-  console.log(2, action)
+const CounterInitialState = {
+  value: 0,
+  stars: 0
+}
+const Counter = (state = CounterInitialState, action) => {
   switch (action.type) {
-    case 'ADD':
+    case "ADD":
       return {
         ...state,
         value: state.value + action.value
@@ -13,9 +14,13 @@ const add = (state = {
         ...state,
         value: state.value - action.value
       }
-
+    case 'STAR':
+      return {
+        ...state,
+        stars: action.value.stars
+      }
     default:
       return state
   }
 }
-export default add
+export default Counter
