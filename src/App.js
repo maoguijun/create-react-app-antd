@@ -14,10 +14,10 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <Switch>
+            <Redirect exact path={routePath.base} to={routePath.excel2json}/>
             <BaseLayout>
               {routes.map(({path, component}) => (<Route exact key={path} path={path} component={component}/>))}
             </BaseLayout>
-            <Redirect exact path={routePath.base} to={routePath.excel2json}/>
           </Switch>
         </Router>
       </Provider>
