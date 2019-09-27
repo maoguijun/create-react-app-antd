@@ -1,5 +1,5 @@
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux';
 
-import Counter from '../containers/counter/reducers'
+import Sensitive from '../containers/sensitive/reducers';
 
-export default combineReducers({Counter})
+export default combineReducers({ Sensitive });

@@ -10788,6 +10788,11 @@ send@0.16.2:
     range-parser "~1.2.0"
     statuses "~1.4.0"
 
+sensitive-word-helper-plus@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/sensitive-word-helper-plus/-/sensitive-word-helper-plus-1.0.5.tgz#5af7c903dde8d81cdac40d2f68cdafae9d877519"
+  integrity sha512-gQfBM45B8yYb+LnVBnIQVmfMqj8w+QxRkFAzoIkwuxIAwddLv+UqPcGNHoxCNpm0olwdunjfFZy0ChmkjeCsLg==
+
 serialize-javascript@^1.4.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.5.0.tgz#1aa336162c88a890ddad5384baebc93a655161fe"
