@@ -18,7 +18,7 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "sensitive-word-helper-plus": "^1.0.5"
+    "sensitive-word-helper-plus": "^1.0.6"
   },
   "scripts": {
     "start": "react-app-rewired start",

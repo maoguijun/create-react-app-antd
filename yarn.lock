@@ -10788,10 +10788,10 @@ send@0.16.2:
     range-parser "~1.2.0"
     statuses "~1.4.0"
 
-sensitive-word-helper-plus@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/sensitive-word-helper-plus/-/sensitive-word-helper-plus-1.0.5.tgz#5af7c903dde8d81cdac40d2f68cdafae9d877519"
-  integrity sha512-gQfBM45B8yYb+LnVBnIQVmfMqj8w+QxRkFAzoIkwuxIAwddLv+UqPcGNHoxCNpm0olwdunjfFZy0ChmkjeCsLg==
+sensitive-word-helper-plus@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/sensitive-word-helper-plus/-/sensitive-word-helper-plus-1.0.6.tgz#3ba997401e15d21c2c8e6760bada902a858de6e8"
+  integrity sha512-VzyVWsQgjkL2jQfRQ2+tCaYM+VUCbcMbloguw2gH9nwh1To/C16972oO8gvTd+Am5poL00Ni4oDe/D8nGD+Vig==
 
 serialize-javascript@^1.4.0:
   version "1.5.0"

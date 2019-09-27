@@ -39,6 +39,7 @@ class Sensitive extends Component {
     }
     const time1Start = Number(new Date());
     const swhp = new SWHP(initObj);
+    // console.log(swhp);
     const time1End = Number(new Date());
 
     const time2Start = Number(new Date());
@@ -85,7 +86,7 @@ class Sensitive extends Component {
               <Input
                 value={step}
                 onChange={e => this.onChange(e, 'step')}
-                placeholder='非负整数, 可以不输人， 默认为 3'
+                placeholder='非负整数, 可以不输人， 默认为 0'
               />
             </Col>
           </Row>
@@ -110,7 +111,6 @@ class Sensitive extends Component {
                 value={text}
                 onChange={e => this.onChange(e, 'text')}
                 maxLength={20000}
-                
               />
             </Col>
           </Row>
@@ -155,7 +155,6 @@ const mapDispatchToProps = dispatch => ({
   )
 });
 const mapStateToProps = (state, ownProps) => {
-  console.log(state);
   return { Sensitive: state.Sensitive };
 };
 export default connect(
